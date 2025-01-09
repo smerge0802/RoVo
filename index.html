@@ -33,6 +33,37 @@
             margin-bottom: 10px;
         }
 
+        /* Abstract 섹션 스타일 */
+        .abstract-section {
+            background-color: #f9f9f9; /* 연한 회색 배경 */
+            border-left: 5px solid #000; /* 왼쪽 검정색 강조 선 */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px; /* 모서리 둥글게 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+        }
+        .abstract-section h2 {
+            text-align: center; /* 제목 가운데 정렬 */
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #444;
+        }
+        .abstract-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333; /* 텍스트 색상 */
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .abstract-section .dropcap {
+            float: left;
+            font-size: 3rem; /* 강조된 첫 글자의 크기 */
+            font-weight: bold;
+            margin-right: 10px; /* 텍스트와 간격 */
+            line-height: 1; /* 글자 높이 조정 */
+            color: #000; /* 첫 글자 검정색 */
+        }
+
         /* 각 섹션 스타일 */
         .section {
             margin: 60px 0; /* 섹션 사이 여백 */
@@ -61,16 +92,13 @@
             margin: 20px 0;
             border-collapse: collapse; /* 셀 간격 제거 */
         }
-        /* 헤더 스타일 */
         .audio-samples thead th {
             font-weight: bold;
             padding: 15px;
         }
-        /* 헤더와 본문 사이 구분선 */
         .audio-samples thead {
             border-bottom: 2px solid #000; /* 진한 검정색 구분선 */
         }
-        /* 본문 스타일 */
         .audio-samples tbody tr {
             border-bottom: 1px solid #e0e0e0; /* 연한 회색 행 구분선 */
             transition: background-color 0.3s; /* 부드러운 전환 효과 */
@@ -78,12 +106,9 @@
         .audio-samples tbody tr:last-child {
             border-bottom: none; /* 마지막 행 구분선 제거 */
         }
-        /* 행 Hover 효과 */
         .audio-samples tbody tr:hover {
             background-color: #f0f0f0; /* 연한 회색 배경색 */
         }
-       
-        /* 열 너비 조정 */
         .audio-samples th:first-child,
         .audio-samples td:first-child {
             width: 50%; /* Type 열 */
@@ -94,19 +119,15 @@
         .audio-samples td:nth-child(3) {
             width: 25%; /* Real Audio와 Defense Audio 열 */
         }
-
-        /* 행 간격 조정 */
         .audio-samples tbody tr td {
             padding: 20px 15px; /* 행 높이를 위해 내부 여백 조정 */
         }
-        /* 섹션 내 이미지 스타일 */
         .section img {
             display: block;
             max-width: 100%; /* 섹션 너비에 맞게 조정 */
             height: auto; /* 이미지 비율 유지 */
             margin: 0 auto; /* 중앙 정렬 */
         }
-        /* 오디오 플레이어 스타일 */
         .audio-player {
             display: block;
             width: 100%; /* 모든 오디오 플레이어 동일한 크기 */
@@ -122,26 +143,19 @@
             <h1>RoVo: Robust Voice Protection Against Unauthorized Speech Synthesis with Embedding-Level Perturbations</h1>
         </div>
 
-        <!-- Introduction Section -->
-        <div class="section">
-            <h2>Abstract</h2>
-            <p>ㅤWith the rapid advancement of AI-based data generation
-                technologies, speech synthesis models like DeepVoice can create highly
-                realistic speech, even for phrases never spoken. While these technologies
-                offer promising applications, they pose significant risks, such as phishing
-                or fake news propagation. Traditional defense mechanisms, such as adversarial perturbation injection at the signal level, are easily bypassed by
-                speech enhancement techniques, reducing their effectiveness.
-                </p>
-            <p>ㅤTo address
-                these challenges, we propose RoVo, a novel defense method that inserts perturbations into high-dimensional embedding vectors during speech reconstruction. This approach enhances defense robustness and maintainsresilience against advanced synthesis models and noise suppression techniques. Experimental results validate the effectiveness of RoVo, achieving over 70% improvement in Defense Success Rate (DSR) across various synthesis models compared to unprotected audio.
-                On platforms like Microsoft Azure, RoVo achieved a DSR of 99.5%, demonstrating its strong capability to prevent malicious synthesis attempts. Furthermore, RoVo exhibited robust performance even when advanced speech enhancement models were applied, significantly outperforming traditional defenses in preserving DSR levels. 
-                </p>
-            <p>ㅤUser studies confirm that RoVo retains speech
-                naturalness and usability, while transferability tests highlight its effec
-                tiveness across unseen synthesis models. By addressing key limitations
-                of existing defenses, RoVo provides a robust and practical solution for
-                safeguarding speech data in increasingly complex environments.
-                </p>
+        <!-- Abstract Section -->
+        <div class="abstract-section">
+            <h2>Abstract jj</h2>
+            <p>
+                <span class="dropcap">W</span>
+                ith the rapid advancement of AI-based data generation technologies, speech synthesis models like Deep Voice enable the creation of highly realistic speech, even for phrases never spoken. While these technologies have promising applications, they pose significant risks, such as generating malicious content for phishing or fake news propagation. Traditional defense mechanisms, such as adversarial perturbation injection at the signal level, are easily bypassed by speech enhancement techniques, limiting their effectiveness.
+            </p>
+            <p>
+                ㅤTo address these challenges, we propose RoVo, a novel defense method that inserts perturbations into high-dimensional embedding vectors during speech reconstruction. This approach enhances defense robustness and maintains resilience against advanced synthesis models and noise suppression techniques. Experimental results validate the effectiveness of RoVo, achieving over 70% improvement in Defense Success Rate (DSR) across various synthesis models compared to unprotected audio.
+            </p>
+            <p>
+                ㅤUser studies confirm that RoVo retains speech naturalness and usability, while transferability tests highlight its effectiveness across unseen synthesis models. By addressing key limitations of existing defenses, RoVo provides a robust and practical solution for safeguarding speech data in increasingly complex environments.
+            </p>
         </div>
 
         <!-- Model Overview Section -->
