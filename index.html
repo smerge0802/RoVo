@@ -147,21 +147,20 @@
             <h2>Abstract</h2>
             <p>
                 <span class="dropcap">W</span>
-                ith the rapid advancement of AI-based data generation technologies, speech synthesis models like Deep Voice can generate highly realistic speech, even for phrases never spoken. These technologies, while offering valuable applications, also pose significant threats, such as phishing attacks and the spread of fake news. To address these risks, existing defense strategies have primarily employed adversarial perturbation injection at the signal level. However, these methods are often ineffective as they can be easily counteracted by speech enhancement techniques.
+                ith the advancement of AI-based speech synthesis technologies such as Deep Voice, there is an increasing risk of voice spoofing attacks, including voice phishing and fake news, through unauthorized use of others' voices. Existing defenses that inject adversarial perturbations directly into audio signals have limited effectiveness, as these perturbations can easily be neutralized by speech enhancement methods.
             </p>
             <p>
-                ㅤTo overcome these limitations, we propose RoVo (Robust Voice), a defense mechanism that injects perturbations into high-dimensional embedding vectors during the speech reconstruction process. This embedding-level perturbation strengthens defense robustness, ensuring resilience against advanced synthesis and noise suppression models.
-                RoVo demonstrated its effectiveness across various experiments, achieving over 70% improvement in Defense Success Rate (DSR) compared to unprotected audio. On platforms like Microsoft Azure, RoVo achieved a remarkable DSR of 99.5%, effectively preventing malicious synthesis attempts. RoVo also maintained high DSR levels under advanced speech enhancement models, outperforming traditional defenses.
-            </p>
+                ㅤTo overcome this limitation, we propose RoVo(Robust Voice), a novel proactive defense technique that injects adversarial perturbations into high-dimensional embedding vectors of audio signals, reconstructing them into protected speech. This approach effectively defends against speech synthesis attacks and also provides strong resistance to speech enhancement models, which represent a secondary attack threat.
+                In extensive experiments, RoVo increased the Defense Success Rate (DSR) by over 70% compared to unprotected speech, across four state-of-the-art speech synthesis models. Specifically, RoVo achieved a DSR of 99.5% on a commercial speaker-verification API, effectively neutralizing speech synthesis attack. Moreover, RoVo's perturbations remained robust even under strong speech enhancement conditions, outperforming traditional methods. 
             <p>
-                ㅤIn user studies, RoVo preserved the naturalness and usability of speech, while transferability tests showcased its robustness against unseen synthesis models. These results demonstrate that RoVo is a dependable and effective approach for protecting speech data, even in complex and evolving environments.
+                ㅤA user study confirmed that RoVo preserves both naturalness and usability of protected speech, highlighting its effectiveness in complex and evolving threat scenarios.
             </p>
         </div>
 
         <!-- Model Overview Section -->
         <div class="section">
             <h2>Model Overview</h2>
-            <img src="https://www.dropbox.com/scl/fi/x2bmhy96dt9e2rlcb7eju/overview.png?rlkey=6ztyn6qg4l66nmkr4axuux4ve&st=g09etkrz&raw=1" alt="Model Overview Image">
+            <img src="https://www.dropbox.com/scl/fi/ylzox1n7v9lxkfk30xd1u/1.png?rlkey=189p9xx4ak120zu93j1qbt1wr&st=g3hs5msl&raw=1" alt="Model Overview Image">
             <p>
                 ㅤOverview of the proposed adversarial embedding defense mechanism. The system protects against unauthorized voice synthesis and downstream misuse such as vishing, fake news, and fraudulent verification, even in the presence of noise removal or speech enhancement techniques.
             </p>
